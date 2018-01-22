@@ -1,6 +1,6 @@
-class PostController < ApplicationController
+class AdminPostController < ApplicationController
   def index
-    posts = Post.all
+    posts = Post.all.includes?(:user)
     render("index.slang")
   end
 

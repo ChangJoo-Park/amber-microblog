@@ -1,11 +1,11 @@
 - active = context.request.path == "/" ? "active" : ""
 a class="nav-item #{active}" href="/" Home
-- active = context.request.path == "/categories" ? "active" : ""
-a class="nav-item #{active}" href="/categories" Categories
-- active = context.request.path == "/posts" ? "active" : ""
-a class="nav-item #{active}" href="/posts" Posts
-- active = context.request.path == "/post_comments" ? "active" : ""
-a class="nav-item #{active}" href="/post_comments" Post Comments
+- active = context.request.path == "/admin/categories" ? "active" : ""
+a class="nav-item #{active}" href="/admin/categories" Categories
+- active = context.request.path == "/admin/posts" ? "active" : ""
+a class="nav-item #{active}" href="/admin/posts" Posts
+- active = context.request.path == "/admin/post_comments" ? "active" : ""
+a class="nav-item #{active}" href="/admin/post_comments" Post Comments
 
 - if (current_user = context.current_user)
   a.nav-item.pull-right href="/signout"

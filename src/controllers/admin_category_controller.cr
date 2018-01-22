@@ -1,4 +1,4 @@
-class AdminCategoryController < ApplicationController
+class CategoryController < ApplicationController
   def index
     categories = Category.all
     render("index.slang")

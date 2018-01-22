@@ -27,9 +27,6 @@ Amber::Server.configure do |app|
   end
 
   routes :web do
-    resources "/post_comments", PostCommentController
-    resources "/posts", PostController, only: [:index, :show]
-    resources "/categories", CategoryController
     get "/profile", UserController, :show
     get "/profile/edit", UserController, :edit
     patch "/profile", UserController, :update
@@ -42,8 +39,8 @@ Amber::Server.configure do |app|
   end
 
   routes :web, "/admin" do
-    resources "/post_comments", PostCommentController
-    resources "/posts", PostController
-    resources "/categories", CategoryController
+    resources "/post_comments", AdminPostCommentController
+    resources "/posts", AdminPostController
+    resources "/categories", AdminCategoryController
   end
 end

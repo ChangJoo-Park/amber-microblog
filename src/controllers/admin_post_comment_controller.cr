@@ -1,4 +1,4 @@
-class PostCommentController < ApplicationController
+class AdminPostCommentController < ApplicationController
   def index
     post_comments = PostComment.all
     render("index.slang")
