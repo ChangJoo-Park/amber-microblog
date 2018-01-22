@@ -11,10 +11,10 @@
   == text_area(name: "body", content: post.body, placeholder: "Body", class: "form-control", size: "30x10")
   div.form-group
     == label(:user)
-    == select_field(name: "user_id", collection: User.all.map{|user| [user.id, user.id]}, selected: post.user_id, class: "form-control")
+    == select_field(name: "user_id", collection: User.all.map{|user| [user.id, user.email]}, selected: post.user_id, class: "form-control")
   div.form-group
     == label(:category)
-    == select_field(name: "category_id", collection: Category.all.map{|category| [category.id, category.id]}, selected: post.category_id, class: "form-control")
+    == select_field(name: "category_id", collection: Category.all.map{|category| [category.id, category.name]}, selected: post.category_id, class: "form-control")
   div.form-group
   div.checkbox
     == label(:published) do
