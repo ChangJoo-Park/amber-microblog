@@ -5,7 +5,7 @@ CREATE TABLE posts (
   body TEXT,
   user_id BIGINT,
   category_id BIGINT,
-  published BOOL,
+  published BOOL DEFAULT FALSE,
   created_at TIMESTAMP,
   updated_at TIMESTAMP
 );
