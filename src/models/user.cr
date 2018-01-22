@@ -8,6 +8,9 @@ class User < Granite::ORM::Base
   field email : String
   field hashed_password : String
 
+  has_many :posts
+  has_many :post_comments
+
   validate :email, "is required", -> (user : User) do
     (email = user.email) ? !email.empty? : false
   end
