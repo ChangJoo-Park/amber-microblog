@@ -1,0 +1,39 @@
+name: microblog
+version: 0.1.0
+
+authors:
+  - ChangJoo Park <changjoo.park@partner.so>
+
+crystal: 0.24.1
+
+license: UNLICENSED
+
+targets:
+  microblog:
+    main: src/microblog.cr
+
+dependencies:
+  amber:
+    github: amberframework/amber
+    version: 0.6.4
+
+  granite_orm:
+    github: amberframework/granite-orm
+    version: ~> 0.8.2
+
+  quartz_mailer:
+    github: amberframework/quartz-mailer
+    version: ~> 0.4.0
+
+  jasper_helpers:
+    github: amberframework/jasper-helpers
+    version: ~> 0.1.6
+
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
+    version: ~> 0.9.0
+
+development_dependencies:
+  garnet_spec:
+    github: amberframework/garnet-spec
+    version: ~> 0.1.1
