@@ -27,6 +27,7 @@ Amber::Server.configure do |app|
   end
 
   routes :web do
+      resources "/post_comments", PostCommentController
       resources "/posts", PostController
       resources "/categories", CategoryController
       get "/profile", UserController, :show
