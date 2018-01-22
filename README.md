@@ -1,5 +1,7 @@
 # microblog
 
+[![Amber Framework](https://img.shields.io/badge/using-amber%20framework-orange.svg)](Your project url)
+
 microblog is a new project using [Amber Framework](https://amberframework.org/)
 
 ## Installation
