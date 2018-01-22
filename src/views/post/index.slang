@@ -12,15 +12,17 @@ div.table-responsive
         th User
         th Category
         th Published
+        th Comments
         th Actions
     tbody
     - posts.each do |post|
       tr
         td = post.title
         td = post.body
-        td = post.user.id
-        td = post.category.id
+        td = post.user.email
+        td = post.category.name
         td = post.published
+        td = post.post_comments.size
         td
           span
             == link_to("read", "/posts/#{post.id}", class: "btn btn-success btn-xs")
